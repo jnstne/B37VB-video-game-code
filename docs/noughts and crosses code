@@ -1,9 +1,11 @@
 #include <stdio.h>
  
 // Globally declared 2D-array
+
 char board[3][3];
  
 // Function that initialises the game board
+
 void initializeBoard()
 {
     for (int i = 0; i < 3; i++)
@@ -32,6 +34,7 @@ void initializeBoard()
 }
  
 // Function to show the game board
+
 void showBoard(int x, int y)
 {
     printf("\n\n\t  ");
@@ -51,15 +54,16 @@ void showBoard(int x, int y)
     printf("\n\n\n");
 }
  
-// Function to update the game board
+// Function to update the game board when a move is made
+
 int updateBoard(int cell, char playerSign)
 {
     int row = (cell - 1) / 3;
-    int col = (cell - 1) % 3;
+    int column = (cell - 1) % 3;
     int isValid = 1;
  
     // accessing already played cell number
-    if (board[row][col] != ' ')
+    if (board[row][column] != ' ')
     {
         printf("\nInvalid, Cell is already Filled! Try Again.\n");
         isValid = 0;
@@ -68,9 +72,9 @@ int updateBoard(int cell, char playerSign)
     // valid cell position
     else
     {
-        board[row][col] = playerSign;
+        board[row][column] = playerSign;
     }
-    showBoard(row, col);
+    showBoard(row, column);
  
     return isValid;
 }
@@ -99,7 +103,7 @@ int checkWinner(char sg)
         return 1;
     }
  
-    // if there is no winner
+    // if there is no winner (draw)
     return 0;
 }
  
@@ -146,7 +150,7 @@ void playTicTacToe()
         }
         else if (cell == -1)
         {
-            printf("\n\tGame Terminated\n");
+            printf("\n\tGame Terminated.\n");
             return;
         }
         else
@@ -155,7 +159,7 @@ void playTicTacToe()
         }
     }
  
-    // no one won the game
+    // if nobody won the game
     if (!gameResult && playCount == 9)
     {
         printf("\n\t *** Draw this time!  ***\n");
