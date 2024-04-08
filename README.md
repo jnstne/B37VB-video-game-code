@@ -1,7 +1,8 @@
 # Aidan Johnstone Noughts and Crosses game report
 
 ## introduction
-
+for my video game i decided to make my own version of the pre existing noughts and crosses.
+its a game made for 2 players to compete and enjoy
 
 ## instructions of game
 
