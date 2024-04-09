@@ -108,7 +108,7 @@ int checkWinner(char sg)
 }
  
 // Start your game from here
-void playTicTacToe()
+void playNC()
 {
     int gameResult = 0;
     int cell = 0;
@@ -169,7 +169,7 @@ void playTicTacToe()
  
 int main()
 {
-    printf("---- Tic Tac Toe -----\n\n");
+    printf("---- Noughts & Crosses -----\n\n");
  
     printf("\n Instructions \n\n");
     printf("\tPlayer 1 sign is X\n");
@@ -190,7 +190,7 @@ int main()
         // for restarting/ending the game
         while (userChoice)
         {
-            playTicTacToe();
+            playNC();
             printf("\n Menu\n");
             printf("\nPress 1 to Play Again");
             printf("\nPress 0 for End the Game");
@@ -203,6 +203,6 @@ int main()
             printf("\n");
         }
     }
-    printf("\n Thanks for playing my Tic Tac Toe game! \n");
+    printf("\n Thanks for playing my Noughts & Crosses game! \n");
     return 0;
 }
