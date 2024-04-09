@@ -99,15 +99,25 @@ after updating the board, the checkWinner() function is called to determine if t
 if the game result is 1 or 2 (depending on which player wins the game) the winner is announced, and the loop exits.
 
 if the entered cell number is invalid, the player is prompted to enter a valid cell number.
-End of game:
 
 if no winner is found and all cells are filled (i.e., playCount reaches 9), it's a draw.
 the function prints the result of the game (win, draw) and displays "--- Game Over ---".
 
+this final section "int main()" is for calling functions that make the game run and printing whats required of those functions for the player to see and use.
+instructions for the game are printed using said printf statements, including player signs, how to exit the game, and cell numbers on the board. 
+whereas "initializeBoard();" Calls the initializeBoard() function to initialize the game board.
 
+"char start = ' ';" declares the variable "start" to store the player's input for starting the game.
+printf("\n> Press Enter to start!");: prompts the player to press Enter to start the game and "scanf("%c", &start);" takes that input for the player pressing Enter.
 
+if the player presses Enter start becomes true and the game loop starts.
+inside the loop, the playNC() function is called to start playing the game.
 
+after playing the game, the player is prompted with a menu to either play again or end the game.
+if the player chooses to play again (if the function userChoice is 1), the game board is reinitialized using initializeBoard().
+the loop continues until the player chooses to end the game (if the function userChoice is 0).
 
+after exiting the game loop, a message thanking the player for playing the game is displayed and "return 0;" indicates successful completion of the main() function.
 
 the entire code constantly makes use of special characters (\n, \t) which are used for formatting the output to a desired quality, like the board for example, its 9 sections cant be all on the same line so the use of formatting characters cleans that up.
 
