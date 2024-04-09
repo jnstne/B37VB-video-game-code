@@ -29,7 +29,55 @@ when a game is completed a prompt will come up asking the player if they'd like 
 
 ## code explanation
 
+comments have been left throughout the entire code to briefly explain what each section of code is for
 
+the line of code "char board[3][3];" is declaring the global array for the game board, being a 3 by 3 (9 section) array.
+the variables "i" and "j" are used as placeholders for initializing the limits of the board.
+"for" statements act as nested loops and the nested loops are used to initialize the elements of the 2D array (board) to a default value of (' ').
+
+the function "void showBoard(int x, int y)" is about setting up the format of the board 
+
+- the outer loop (for (int i = 0; i < 3; i++)) iterates over the rows of the game board.
+- the inner loop (for (int j = 0; j < 3; j++)) iterates over the columns of the game board.
+
+the line "printf("%c", board[i][j]);" loops up until "j < 2" which prints " | " and up until "i < 2" which prints " \n\t----------------\n\t ".
+
+the function starting with "int updateBoard(int cell, char playerSign)" is a function that calculates the row and column indices of the section based on the provided cell number, it checks if the cell is already filled, then it updates the game board if the cell is empty, lastly it displays the updated game board and returns whether the move was valid or not.
+if its not then "printf("\nInvalid, Cell is already Filled! Try Again.\n");" is printed
+
+the function "int checkWinner(char sg)" is simply a way of individually checking the 2D array for a winner by checking if either player has 3 in a row with every possible outcome of 3 in a row.
+here is a flow chart explaining the code from this function:
+
+
+Start
+
+V
+
+Check all 3 rows
+
+V
+
+Check all 3 columns
+
+V
+
+Check both diagonals
+
+V
+
+If any condition is true, return 1 (indicating a winner)
+
+V
+
+If no winner is found, return 0
+
+V
+
+Loop to start when the next move is made
+
+
+
+the entire code constantly makes use of special characters (\n, \t) which are used for formatting the output to a desired quality, like the board for example, its 9 sections cant be all on the same line so the use of formatting characters cleans that up.
 
 
 ## conclusion 
