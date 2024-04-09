@@ -75,6 +75,38 @@ V
 
 Loop to start when the next move is made
 
+the function "void playNC()" starts by initializing some variables:
+
+
+- "int gameResult = 0;" initializes a variable gameResult to store the result of the game (0 for no result, 1 if player 1 wins, 2 if player 2 wins).
+  
+- "int cell = 0;" initializes a variable cell to store the player's input for the cell number they want to mark (1-9).
+
+- "int playCount = 0;" initializes a variable playCount to keep track of the number of moves played.
+
+- "int updationResult = 1;" initializes a variable updationResult to store the result of updating the game board (1 for successful update, 0 for unsuccessful update).
+
+- "char playerSign = ' ';" initializes a variable playerSign to store the symbol ('X' or 'O') of the current player.
+
+the while loop (while (!gameResult && playCount < 9)) continues until the gameResult is non-zero (indicating a win) or playCount reaches 9 (indicating a draw).
+
+within the loop, the current player is determined based on the value of "playCount % 2". If playCount is even, it's player 1's turn (X), otherwise it's player 2's turn (O).
+
+the player is prompted to enter a cell number where they want to place their symbol.
+then the input is validated, If the entered cell number is valid (between 1 and 9), the game board is updated using the updateBoard() function.
+
+after updating the board, the checkWinner() function is called to determine if the current player has won the game.
+if the game result is 1 or 2 (depending on which player wins the game) the winner is announced, and the loop exits.
+
+if the entered cell number is invalid, the player is prompted to enter a valid cell number.
+End of game:
+
+if no winner is found and all cells are filled (i.e., playCount reaches 9), it's a draw.
+the function prints the result of the game (win, draw) and displays "--- Game Over ---".
+
+
+
+
 
 
 the entire code constantly makes use of special characters (\n, \t) which are used for formatting the output to a desired quality, like the board for example, its 9 sections cant be all on the same line so the use of formatting characters cleans that up.
