@@ -169,7 +169,7 @@ void playNC()
  
 int main()
 {
-    printf("---- Noughts & Crosses -----\n\n");
+    printf("----- Noughts & Crosses -----\n\n");
  
     printf("\n Instructions \n\n");
     printf("\tPlayer 1 sign is X\n");
