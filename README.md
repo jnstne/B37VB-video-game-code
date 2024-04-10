@@ -1,10 +1,10 @@
-# Aidan Johnstone Noughts and Crosses game report
+# Aidan Johnstone Noughts and Crosses Game Report
 
-## introduction
+## Introduction
 for my video game i decided to make my own version of the pre existing noughts and crosses.
 its a game made for 2 players to compete and enjoy
 
-## instructions of game
+## Instructions of the Game
 
 its just a classic game of noughts and crosses where 2 players to go against each other 
 to try and get 3 of their shape in a row while simultaniously stopping the other from
@@ -27,7 +27,7 @@ alternatively the game also ends when all 9 sections have been filled and no win
 
 when a game is completed a prompt will come up asking the player if they'd like to play again or terminate the run, also any game can be terminated by typing -1.
 
-## code explanation
+## Code Explanation
 
 comments have been left throughout the entire code to briefly explain what each section of code is for
 
@@ -121,5 +121,7 @@ after exiting the game loop, a message thanking the player for playing the game 
 
 the entire code constantly makes use of special characters (\n, \t) which are used for formatting the output to a desired quality, like the board for example, its 9 sections cant be all on the same line so the use of formatting characters cleans that up.
 
+## Conclusion 
 
-## conclusion 
+overall this was just my take on the classic game noughts & crosses with hopefully a clear and consise guide on the making of my code.
+
