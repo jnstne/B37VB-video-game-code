@@ -6,11 +6,11 @@ its a game made for 2 players to compete and enjoy
 
 ## Instructions of the Game
 
-its just a classic game of noughts and crosses where 2 players to go against each other 
-to try and get 3 of their shape in a row while simultaniously stopping the other from
+the game is a very simple concept as its just a classic game of noughts and crosses where 2 players go against each other 
+to try and get 3 of their shape in a row while simultaniously stopping the other player from
 doing the same
 
-the controls are shown in the game too but ill explain them here too,
+the controls are shown in the game but ill explain them here too,
 
 - Player 1 plays as the symbol X
 - Player 2 plays as the symbol O
@@ -29,7 +29,7 @@ when a game is completed a prompt will come up asking the player if they'd like 
 
 ## Code Explanation
 
-comments have been left throughout the entire code to briefly explain what each section of code is for
+comments have been left throughout the entire code to briefly explain what each section of code is for.
 
 the line of code "char board[3][3];" is declaring the global array for the game board, being a 3 by 3 (9 section) array.
 the variables "i" and "j" are used as placeholders for initializing the limits of the board.
@@ -47,7 +47,6 @@ if its not then "printf("\nInvalid, Cell is already Filled! Try Again.\n");" is 
 
 the function "int checkWinner(char sg)" is simply a way of individually checking the 2D array for a winner by checking if either player has 3 in a row with every possible outcome of 3 in a row.
 here is a flow chart explaining the code from this function:
-
 
 Start
 
@@ -76,7 +75,6 @@ V
 Loop to start when the next move is made
 
 the function "void playNC()" starts by initializing some variables:
-
 
 - "int gameResult = 0;" initializes a variable gameResult to store the result of the game (0 for no result, 1 if player 1 wins, 2 if player 2 wins).
   
